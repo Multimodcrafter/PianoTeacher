@@ -10,6 +10,9 @@ namespace PianoTeacher
         private MidiOut _outDevice;
         private bool _initialized;
 
+        public delegate void NoteEventDelegate(int pitch, int velocity);
+        public event NoteEventDelegate NoteChanged;
+
         public static IEnumerable<MidiInCapabilities> GetConnectedInputDevices()
         {
             for(var i = 0; i < MidiIn.NumberOfDevices; ++i)
@@ -47,28 +50,15 @@ namespace PianoTeacher
         private void MessageReceived(object sender, MidiInMessageEventArgs e)
         {
             if (e.MidiEvent.CommandCode == MidiCommandCode.TimingClock || e.MidiEvent.CommandCode == MidiCommandCode.AutoSensing) return;
-            if (e.MidiEvent is NoteEvent note && note.Channel == Configuration.PlayChannel)
+            if (e.MidiEvent is NoteEvent {Channel: Configuration.PlayChannel} note)
             {
-                    if (note.Velocity == 0)
-                    {
-                        
-                    }
-                    else
-                    {
-                        
-                    }
-
+                NoteChanged?.Invoke(note.NoteNumber,note.Velocity);
             }
         }
 
         private static void ErrorReceived(object sender, MidiInMessageEventArgs e)
         {
             Console.Error.WriteLine("Error: {0}",e.MidiEvent);
-        }
-
-        private void SendControl(MidiEvent e)
-        {
-            _outDevice.Send(e.GetAsShortMessage());
         }
 
         public void Dispose()

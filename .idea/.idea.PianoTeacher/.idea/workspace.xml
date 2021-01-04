@@ -4,26 +4,16 @@
     <projectFile>PianoTeacher.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1357431b-aa5c-40a6-9ba9-808a44ad21b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Configuration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Configurator.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Configurator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Configurator.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PianoController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PianoTeacher.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PianoTeacher.csproj.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PianoTeacher.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PianoTeacher.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+    <list default="true" id="1357431b-aa5c-40a6-9ba9-808a44ad21b0" name="Default Changelist" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/Chord.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChordExerciseConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MusicKey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Main.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PianoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PianoController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +28,12 @@
       <option value="$PROJECT_DIR$/Main.Designer.cs" />
       <option value="$PROJECT_DIR$/Configurator.cs" />
       <option value="$PROJECT_DIR$/Configurator.Designer.cs" />
+      <option value="$PROJECT_DIR$/Main.cs" />
       <option value="$PROJECT_DIR$/PianoController.cs" />
       <option value="$PROJECT_DIR$/Configuration.cs" />
+      <option value="$PROJECT_DIR$/ChordExerciseConfiguration.cs" />
+      <option value="$PROJECT_DIR$/Chord.cs" />
+      <option value="$PROJECT_DIR$/MusicKey.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZASgvD48SKu5vU0SFngIDPNiw" />
@@ -83,13 +77,22 @@
       <option name="presentableId" value="Default" />
       <updated>1609690740775</updated>
       <workItem from="1609690745761" duration="3086000" />
+      <workItem from="1609783846829" duration="9572000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1609783943990</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609783943990</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -101,8 +104,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
 </project>
