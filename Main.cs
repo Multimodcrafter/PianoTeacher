@@ -7,6 +7,7 @@ namespace PianoTeacher
     {
         private readonly PianoController _piano;
         private bool _connected;
+        private ChordExerciseConfiguration _chordExerciseConfiguration;
         
         public Form1()
         {
@@ -70,7 +71,12 @@ namespace PianoTeacher
 
         private void ConfigureButtonClick(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            using var dialog = new Configurator(_chordExerciseConfiguration);
+            var result = dialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                _chordExerciseConfiguration = dialog.ConfigurationResult;
+            }
         }
 
         private void StartButtonClick(object sender, EventArgs e)

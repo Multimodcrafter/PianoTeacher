@@ -4,16 +4,13 @@
     <projectFile>PianoTeacher.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1357431b-aa5c-40a6-9ba9-808a44ad21b0" name="Default Changelist" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/Chord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChordExerciseConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MusicKey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="1357431b-aa5c-40a6-9ba9-808a44ad21b0" name="Default Changelist" comment="Add selection for midi device, Add Key and Chord info structures">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Configuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Main.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChordExerciseConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ChordExerciseConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configurator.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Configurator.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configurator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Configurator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PianoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PianoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MusicKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MusicKey.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,14 +23,14 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Main.Designer.cs" />
-      <option value="$PROJECT_DIR$/Configurator.cs" />
       <option value="$PROJECT_DIR$/Configurator.Designer.cs" />
-      <option value="$PROJECT_DIR$/Main.cs" />
       <option value="$PROJECT_DIR$/PianoController.cs" />
       <option value="$PROJECT_DIR$/Configuration.cs" />
-      <option value="$PROJECT_DIR$/ChordExerciseConfiguration.cs" />
       <option value="$PROJECT_DIR$/Chord.cs" />
+      <option value="$PROJECT_DIR$/ChordExerciseConfiguration.cs" />
       <option value="$PROJECT_DIR$/MusicKey.cs" />
+      <option value="$PROJECT_DIR$/Main.cs" />
+      <option value="$PROJECT_DIR$/Configurator.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZASgvD48SKu5vU0SFngIDPNiw" />
@@ -77,7 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1609690740775</updated>
       <workItem from="1609690745761" duration="3086000" />
-      <workItem from="1609783846829" duration="9572000" />
+      <workItem from="1609783846829" duration="10528000" />
+      <workItem from="1609874004703" duration="4027000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1609783943990</created>
@@ -86,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609783943990</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add selection for midi device, Add Key and Chord info structures">
+      <created>1609793982803</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609793982803</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +114,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Add selection for midi device, Add Key and Chord info structures" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add selection for midi device, Add Key and Chord info structures" />
   </component>
 </project>

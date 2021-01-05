@@ -1,3 +1,4 @@
+#nullable enable
 using System;
 
 namespace PianoTeacher
@@ -20,6 +21,13 @@ namespace PianoTeacher
             new[] {"B" ,"C#","D#","E" ,"F#","G#","A#"}  //B  Major
         };
 
+        public static readonly MusicKey[] Keys =
+        {
+            new (0,true),
+            new (1,true),
+            new (2,true)
+        };
+
         public string DisplayName => NoteNames[BaseNote][0] + " Major";
         public int BaseNote { get; }
         public bool Major { get; }
@@ -28,6 +36,31 @@ namespace PianoTeacher
         {
             BaseNote = note % 12;
             Major = major;
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is MusicKey other && Equals(other);
+        }
+        
+        private bool Equals(MusicKey other)
+        {
+            return BaseNote == other.BaseNote && Major == other.Major;
+        }
+        
+        public static bool operator ==(MusicKey left, MusicKey right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(MusicKey left, MusicKey right)
+        {
+            return !(left == right);
+        }
+        
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(BaseNote, Major);
         }
 
         public int GetAbsoluteNote(int relativeNote)

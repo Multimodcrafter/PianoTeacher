@@ -48,7 +48,7 @@
             this.ChordLabel.Name = "ChordLabel";
             this.ChordLabel.Size = new System.Drawing.Size(754, 296);
             this.ChordLabel.TabIndex = 0;
-            this.ChordLabel.Text = "Am7";
+            this.ChordLabel.Text = ":)";
             this.ChordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ConfigureButton
