@@ -29,10 +29,10 @@ namespace PianoTeacher
         };
 
         public string DisplayName => NoteNames[BaseNote][0] + " Major";
-        public int BaseNote { get; }
-        public bool Major { get; }
+        private int BaseNote { get; }
+        private bool Major { get; }
 
-        public MusicKey(int note, bool major)
+        private MusicKey(int note, bool major)
         {
             BaseNote = note % 12;
             Major = major;
@@ -65,13 +65,15 @@ namespace PianoTeacher
 
         public int GetAbsoluteNote(int relativeNote)
         {
-            relativeNote %= 8;
-            relativeNote = relativeNote == 0 ? 1 : relativeNote;
+            if (relativeNote > 12) throw new ArgumentOutOfRangeException(nameof(relativeNote), @"must be in [1,12]");
             //A major scale has half-steps from note 3 to 4 and from 7 to 8
             //A minor scale has half-steps from note 2 to 3 and from 5 to 6
             var firstHalfStep = Major ? 4 : 3;
             var secondHalfStep = Major ? 8 : 6;
-            var result = BaseNote + (relativeNote - 1) * 2 - (relativeNote >= firstHalfStep ? 1 : 0) - (relativeNote >= secondHalfStep ? 1 : 0);
+            var result = BaseNote + (relativeNote - 1) * 2 
+                         - (relativeNote >= firstHalfStep ? 1 : 0) 
+                         - (relativeNote >= secondHalfStep ? 1 : 0)
+                         - (relativeNote >= firstHalfStep + 7 ? 1 : 0);
             return result;
         }
 
@@ -80,6 +82,16 @@ namespace PianoTeacher
             relativeNote %= 8;
             relativeNote = relativeNote == 0 ? 1 : relativeNote;
             return NoteNames[BaseNote][relativeNote - 1] + GetChordExtension(relativeNote);
+        }
+
+        public bool IsChordMinor(int relativeNote)
+        {
+            if (Major)
+            {
+                return relativeNote == 2 || relativeNote == 3 || relativeNote == 6;
+            }
+
+            throw new NotImplementedException("minor scales not supported yet");
         }
 
         private string GetChordExtension(int relativeNote)

@@ -10,11 +10,37 @@ namespace PianoTeacher
 
     public enum ChordInversion
     {
-        Normal, First, Second, Third
+        Normal = 0, First = 1, Second = 2, Third = 3
     }
     
     public readonly struct Chord
     {
+        private bool Equals(Chord other)
+        {
+            if (ExpectedNotes == null || other.ExpectedNotes == null) return false;
+            return ExpectedNotes.SequenceEqual(other.ExpectedNotes);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Chord other && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return ExpectedNotes.GetHashCode();
+        }
+
+        public static bool operator ==(Chord left, Chord right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(Chord left, Chord right)
+        {
+            return !left.Equals(right);
+        }
+
         private int Number { get; }
         private MusicKey Key { get; }
         private ChordVariant Variant { get; }
@@ -32,18 +58,21 @@ namespace PianoTeacher
             var secondRelative = Variant switch
             {
                 ChordVariant.Two => Number + 1,
+                ChordVariant.Add2 => Number + 1,
                 ChordVariant.Suspended => Number + 3,
                 _ => Number + 2
             };
             var thirdRelative = Variant switch
             {
                 ChordVariant.Six => Number + 5,
+                ChordVariant.Add4 => Number + 3,
+                ChordVariant.Add2 => Number + 2,
                 _ => Number + 4
             };
             var fourthRelative = Variant switch
             {
-                ChordVariant.Add2 => Number + 1,
-                ChordVariant.Add4 => Number + 3,
+                ChordVariant.Add2 => Number + 4,
+                ChordVariant.Add4 => Number + 4,
                 ChordVariant.Add6 => Number + 5,
                 _ => 0
             };
@@ -61,8 +90,8 @@ namespace PianoTeacher
                     break;
                 case ChordVariant.Flat:
                     baseNote -= 1;
-                    secondAbsolute -= 1;
-                    thirdAbsolute -= 1;
+                    secondAbsolute = baseNote + 4;
+                    thirdAbsolute = secondAbsolute + 3;
                     break;
                 case ChordVariant.Major7:
                     fourthAbsolute = baseNote + 11;
@@ -82,18 +111,19 @@ namespace PianoTeacher
                 case ChordVariant.Minor7:
                     ExpectedNotes = Inversion switch
                     {
+                        //shift inverted notes by an octave so chord satisfaction works as expected (notes need to be monotonically increasing)
                         ChordInversion.Normal => new[] {baseNote, secondAbsolute, thirdAbsolute, fourthAbsolute},
-                        ChordInversion.First => new []{secondAbsolute,thirdAbsolute,fourthAbsolute,baseNote},
-                        ChordInversion.Second => new []{thirdAbsolute,fourthAbsolute,baseNote,secondAbsolute},
-                        ChordInversion.Third => new []{fourthAbsolute,baseNote,secondAbsolute,thirdAbsolute},
+                        ChordInversion.First => new []{secondAbsolute,thirdAbsolute,fourthAbsolute,baseNote + 12},
+                        ChordInversion.Second => new []{thirdAbsolute,fourthAbsolute,baseNote + 12,secondAbsolute + 12},
+                        ChordInversion.Third => new []{fourthAbsolute,baseNote + 12,secondAbsolute + 12,thirdAbsolute + 12},
                         _ => Array.Empty<int>()
                     };
                     break;
                 default:
                     ExpectedNotes = Inversion switch
                     {
-                        ChordInversion.First => new []{secondAbsolute,thirdAbsolute,baseNote},
-                        ChordInversion.Second => new []{thirdAbsolute,baseNote,secondAbsolute},
+                        ChordInversion.First => new []{secondAbsolute,thirdAbsolute,baseNote + 12},
+                        ChordInversion.Second => new []{thirdAbsolute,baseNote + 12,secondAbsolute + 12},
                         _ => new[] {baseNote, secondAbsolute, thirdAbsolute}
                     };
                     break;
@@ -102,7 +132,9 @@ namespace PianoTeacher
 
         public bool Satisfied(int[] notes)
         {
+            Console.WriteLine($@"got: {string.Join(',',notes)}, expected: {string.Join(',',ExpectedNotes)}");
             var shift = ExpectedNotes[0] - notes[0];
+            Console.WriteLine($@"calculated shift: {shift}, mod 12: {shift%12}");
             if (shift % 12 != 0) return false;
             for (var i = 0; i < notes.Length; ++i)
             {
@@ -152,6 +184,9 @@ namespace PianoTeacher
                     result += "add6";
                     break;
             }
+
+            if (Inversion != ChordInversion.Normal) result += $"/{(int)Inversion}";
+            
             return result;
         }
     }

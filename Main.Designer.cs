@@ -1,6 +1,6 @@
 ﻿namespace PianoTeacher
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -129,7 +129,7 @@
             this.RefreshButton.UseVisualStyleBackColor = true;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButtonClick);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,7 +143,7 @@
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.ConfigureButton);
             this.Controls.Add(this.ChordLabel);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "PianoTeacher";
             this.ResumeLayout(false);
             this.PerformLayout();

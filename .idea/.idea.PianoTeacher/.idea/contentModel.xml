@@ -7,11 +7,14 @@
       <e p=".gitignore" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Chord.cs" t="Include" />
+      <e p="ChordExercise.cs" t="Include" />
       <e p="ChordExerciseConfiguration.cs" t="Include" />
       <e p="Configuration.cs" t="Include" />
       <e p="Configurator.cs" t="Include" />
       <e p="Configurator.Designer.cs" t="Include" />
       <e p="Configurator.resx" t="Include" />
+      <e p="IChordDisplay.cs" t="Include" />
+      <e p="IInstrument.cs" t="Include" />
       <e p="Main.cs" t="Include" />
       <e p="Main.Designer.cs" t="Include" />
       <e p="Main.resx" t="Include" />

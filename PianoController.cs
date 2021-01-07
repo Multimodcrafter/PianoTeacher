@@ -4,14 +4,13 @@ using NAudio.Midi;
 
 namespace PianoTeacher
 {
-    internal class PianoController : IDisposable
+    internal class PianoController : IDisposable, IInstrument
     {
         private MidiIn _inDevice;
         private MidiOut _outDevice;
         private bool _initialized;
-
-        public delegate void NoteEventDelegate(int pitch, int velocity);
-        public event NoteEventDelegate NoteChanged;
+        
+        public event IInstrument.NoteEventDelegate NoteChanged;
 
         public static IEnumerable<MidiInCapabilities> GetConnectedInputDevices()
         {
@@ -66,5 +65,6 @@ namespace PianoTeacher
             _inDevice?.Dispose();
             _outDevice?.Dispose();
         }
+
     }
 }
