@@ -8,18 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1357431b-aa5c-40a6-9ba9-808a44ad21b0" name="Default Changelist" comment="Add selection for midi device, Add Key and Chord info structures">
-      <change afterPath="$PROJECT_DIR$/ChordExercise.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IChordDisplay.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IInstrument.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChordVariant.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PianoTeacher/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chord.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChordExercise.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ChordExercise.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChordExerciseConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ChordExerciseConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Main.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configurator.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Configurator.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configurator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Configurator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MusicKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MusicKey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PianoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PianoController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,16 +31,17 @@
       <option value="$PROJECT_DIR$/Main.Designer.cs" />
       <option value="$PROJECT_DIR$/Configurator.Designer.cs" />
       <option value="$PROJECT_DIR$/Configuration.cs" />
-      <option value="$PROJECT_DIR$/Configurator.cs" />
       <option value="$PROJECT_DIR$/Program.cs" />
       <option value="$PROJECT_DIR$/IInstrument.cs" />
       <option value="$PROJECT_DIR$/PianoController.cs" />
       <option value="$PROJECT_DIR$/IChordDisplay.cs" />
       <option value="$PROJECT_DIR$/Main.cs" />
-      <option value="$PROJECT_DIR$/MusicKey.cs" />
       <option value="$PROJECT_DIR$/Chord.cs" />
       <option value="$PROJECT_DIR$/ChordExerciseConfiguration.cs" />
+      <option value="$PROJECT_DIR$/Configurator.cs" />
       <option value="$PROJECT_DIR$/ChordExercise.cs" />
+      <option value="$PROJECT_DIR$/ChordVariant.cs" />
+      <option value="$PROJECT_DIR$/MusicKey.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mZASgvD48SKu5vU0SFngIDPNiw" />
@@ -90,6 +88,7 @@
       <workItem from="1609783846829" duration="10528000" />
       <workItem from="1609874004703" duration="7526000" />
       <workItem from="1610045362653" duration="9078000" />
+      <workItem from="1610133461453" duration="6392000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1609783943990</created>

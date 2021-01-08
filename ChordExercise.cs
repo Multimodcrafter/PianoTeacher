@@ -49,12 +49,10 @@ namespace PianoTeacher
 
         public bool StartExercise(ChordExerciseConfiguration config)
         {
-            if (!config.RegularChords && !config.ExtendedChords && !config.FlatChords && !config.FourChords &&
-                !config.SeventhChords && !config.SixthChords && !config.TwoChords) return false;
+            if ((config.Variants?.Length ?? 0) == 0) return false;
             _configuration = config;
             GetNextChord();
             return true;
-
         }
 
         public void StopExercise()

@@ -9,6 +9,7 @@
       <e p="Chord.cs" t="Include" />
       <e p="ChordExercise.cs" t="Include" />
       <e p="ChordExerciseConfiguration.cs" t="Include" />
+      <e p="ChordVariant.cs" t="Include" />
       <e p="Configuration.cs" t="Include" />
       <e p="Configurator.cs" t="Include" />
       <e p="Configurator.Designer.cs" t="Include" />
